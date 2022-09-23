@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Regex Problem Statements");
+            UserValidation userValidation = new UserValidation();
+            userValidation.FirstNameValidation();
         }
     }
 }

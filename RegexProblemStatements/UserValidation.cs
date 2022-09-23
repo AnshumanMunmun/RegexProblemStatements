@@ -55,5 +55,20 @@ namespace RegexProblemStatements
                 Console.Write("Please Enter Email ID in Proper Manner. For example:- abc.xyz@bl.co.in \n");
             }
         }
+        public void MobileNumber()
+        {
+            Console.WriteLine("Enter Mobile Number :");
+            var Number = Console.ReadLine();
+            var NumberFormat = "^[0-9]{2}\\s[0-9]{10}$";
+            Regex regex = new Regex(NumberFormat);
+            if (regex.IsMatch(Number))
+            {
+                Console.Write("Given Phone Number " + Number + " is Valid \n");
+            }
+            else
+            {
+                Console.Write("Please Enter Number in Proper Manner. For example:- 91 9664436051\n");
+            }
+        }
     }
 }

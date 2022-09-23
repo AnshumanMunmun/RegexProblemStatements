@@ -45,8 +45,8 @@ namespace RegexProblemStatements
             Console.WriteLine("Enter Email Id");
             string email = Console.ReadLine();
             string emailFormat = "^[A-Za-z](.[a-z])+@[A-Za-z]+.[a-z]{2,4}(.[a-z]{2,3})?$";
-            Regex regex1 = new Regex(emailFormat);
-            if (regex1.IsMatch(email))
+            Regex regex = new Regex(emailFormat);
+            if (regex.IsMatch(email))
             {
                 Console.Write("Given Email ID " + email + " is Valid \n");
             }

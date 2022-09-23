@@ -70,5 +70,20 @@ namespace RegexProblemStatements
                 Console.Write("Please Enter Number in Proper Manner. For example:- 91 9664436051\n");
             }
         }
+        public void Password()
+        {
+            Console.WriteLine("Enter Password :");
+            var Password = Console.ReadLine();
+            var PasswordRegex = "[a-zA-Z0-9]{8,}";
+            Regex regex = new Regex(PasswordRegex);
+            if (regex.IsMatch(Password))
+            {
+                Console.Write("Given Password "+ Password +" is Valid \n");
+            }
+            else
+            {
+                Console.Write("Please Enter Password in Proper Format \n");
+            }
+        }
     }
 }

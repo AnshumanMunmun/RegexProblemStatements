@@ -82,7 +82,22 @@ namespace RegexProblemStatements
             }
             else
             {
-                Console.Write("Please Enter Password in Proper Format \n");
+                Console.Write("Please Enter Password in Proper Manner. \n");
+            }
+        }
+        public void Password2()
+        {
+            Console.WriteLine("Enter Password :");
+            var Password = Console.ReadLine();
+            var PasswordRegex = "(?=.*[A-Z])[a-zA-Z0-9]{8,}";
+            Regex regex = new Regex(PasswordRegex);
+            if (regex.IsMatch(Password))
+            {
+                Console.Write("Given Password " + Password + " is Valid \n");
+            }
+            else
+            {
+                Console.Write("Please Enter Password in Proper Manner. \n");
             }
         }
     }

@@ -40,5 +40,20 @@ namespace RegexProblemStatements
                 Console.Write("Please Enter First Letter Capital \n");
             }
         }
+        public void Email()
+        {
+            Console.WriteLine("Enter Email Id");
+            string email = Console.ReadLine();
+            string emailFormat = "^[A-Za-z](.[a-z])+@[A-Za-z]+.[a-z]{2,4}(.[a-z]{2,3})?$";
+            Regex regex1 = new Regex(emailFormat);
+            if (regex1.IsMatch(email))
+            {
+                Console.Write("Given Email ID " + email + " is Valid \n");
+            }
+            else
+            {
+                Console.Write("Please Enter Email ID in Proper Manner. For example:- abc.xyz@bl.co.in \n");
+            }
+        }
     }
 }

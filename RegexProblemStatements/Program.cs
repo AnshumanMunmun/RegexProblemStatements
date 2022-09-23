@@ -8,7 +8,7 @@
             Console.WriteLine("User Registration Form ");
             while (true)
             {
-                Console.WriteLine("Please choose the option :\n1. First Name \n2. Last Name");
+                Console.WriteLine("Please choose the option :\n1. First Name \n2. Last Name \n3. Email");
                 int option = Convert.ToInt16(Console.ReadLine());
                 switch (option)
                 {
@@ -17,6 +17,9 @@
                         break;
                     case 2:
                         userValidation.LastNameValidation();
+                        break;
+                    case 3:
+                        userValidation.Email();
                         break;
                     default:
                         Console.WriteLine("Please enter the correct value.");

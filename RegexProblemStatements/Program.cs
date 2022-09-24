@@ -10,7 +10,7 @@
             {
                 Console.WriteLine("Please choose the option :\n1. First Name \n2. Last Name \n3. Email \n4. Mobile Number " +
                     "\n5. Simple Password of 8 Characters \n6. Password With At least 1 Upper Case " +
-                    "\n7. Password With At least 1 Number");
+                    "\n7. Password With At least 1 Number \n8. Password With At least 1 special character");
                 int option = Convert.ToInt16(Console.ReadLine());
                 switch (option)
                 {
@@ -34,6 +34,9 @@
                         break;
                     case 7:
                         userValidation.Password3();
+                        break;
+                    case 8:
+                        userValidation.Password4();
                         break;
                     default:
                         Console.WriteLine("Please enter the correct value.");

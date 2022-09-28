@@ -5,6 +5,7 @@
         static void Main(string[] args)
         {
             UserValidation userValidation = new UserValidation();
+            EmailValidation emailValidation = new EmailValidation();
             Console.WriteLine("User Registration Form ");
             while (true)
             {
@@ -37,6 +38,9 @@
                         break;
                     case 8:
                         userValidation.Password4();
+                        break;
+                    case 9:
+                        emailValidation.EmailSample();
                         break;
                     default:
                         Console.WriteLine("Please enter the correct value.");
